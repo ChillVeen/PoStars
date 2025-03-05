@@ -55,7 +55,7 @@ struct ContentView: View {
             longitude: "-122.4194",
             latitude: "37.7749",
             elevation: "10",
-            fromDate: "2023-09-01",
+            fromDate: "2023-10-01",
             toDate: "2023-10-31",
             time: "12:00:00",
             output: "table"
