@@ -10,22 +10,9 @@
 		ACD3EEA02D70AEEE0073049E /* Starrr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Starrr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		24021F7F2D7F23BA00B55810 /* Exceptions for "Starrr" folder in "Starrr" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = ACD3EE9F2D70AEEE0073049E /* Starrr */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		ACD3EEA22D70AEEE0073049E /* Starrr */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				24021F7F2D7F23BA00B55810 /* Exceptions for "Starrr" folder in "Starrr" target */,
-			);
 			path = Starrr;
 			sourceTree = "<group>";
 		};
@@ -268,8 +255,6 @@
 				DEVELOPMENT_TEAM = LSWT2JFA58;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Starrr/Info.plist;
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Starrr requires you to access the position of this device";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -300,8 +285,6 @@
 				DEVELOPMENT_TEAM = LSWT2JFA58;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Starrr/Info.plist;
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Starrr requires you to access the position of this device";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
