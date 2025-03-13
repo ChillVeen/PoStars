@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct StargazingApp: App {
+struct StarrrApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

@@ -5,6 +5,14 @@
 //  Created by Alessandro Rippa on 11/03/25.
 //
 
+//
+//  SBosListView.swift
+//  Stargazing
+//
+//  Created by Alessandro Rippa on 13/03/25.
+//
+
+
 import SwiftUI
 import CoreLocation
 import WeatherKit
@@ -27,14 +35,13 @@ struct SBListView: View {
     @State private var place: String = ""
     @State private var location = CLLocation()
     
-    /*
     // variables for star visualizations
     let starCount = 500
     @State private var starPositions: [CGPoint] = []
     @State private var starSizes: [CGFloat] = []
     @State private var starDepths: [CGFloat] = [] // 0 = far, 1 = close
     @State private var starOpacities: [Double] = []
-    */
+    
     // variable for weatherkit
     private let weatherService = WeatherService.shared
     @StateObject private var weather = WeatherViewModel()
@@ -45,9 +52,9 @@ struct SBListView: View {
             
             VStack {
                 
-                if errorMessage != nil {
+                if let errorMessage = errorMessage {
                     
-                    Text("Unable to fetch coordinates. Please ensure that the localization services are enabled and that the connection signal of your device is strong and try again.")
+                    Text("Unable to fetch coordinates. Please ensure that the localization services are enabled and that the radio signal of your device is strong and try again.")
                         .foregroundStyle(Color.red)
                         .padding()
                     
@@ -70,60 +77,147 @@ struct SBListView: View {
                     
                 } else if let apiResponse = apiResponse {
                     
-                    List {
+                    TabView {
                         
                         ForEach(apiResponse.data, id: \.self) { object in
                             NavigationLink(destination: DetailView(object: object, fields: apiResponse.fields)) {
                                 
-                                VStack(alignment: .leading) {
+                                VStack(alignment: .center) {
                                     
                                     Text(object[1])
-                                        .font(.title)
+                                        .font(.system(size: 30, weight: .bold))
                                         .foregroundStyle(Color.black)
                                     
-                                    Text(locationName)
-                                        .font(.subheadline)
-                                        .foregroundColor(.blue)
-                                    
-                                    Text("Date: \(date)")
-                                        .font(.title2)
-                                        .foregroundColor(.black)
-                                    /*
-                                    Text("Transit Time: \(object[3])")
-                                        .font(.title2)
-                                        .foregroundColor(.black)
-                                    
-                                    Text("Temperature: \(String(format: "%.1f", weather.temperature ?? 0))°C")
-                                        .font(.title2)
-                                        .foregroundColor(.black)
-                                    
-                                    Text("Cloud coverage: \(String(format: "%.1f", weather.cloudCover ?? 0))%")
-                                        .font(.title2)
-                                        .foregroundColor(.black)
-                                    
-                                    Text("Precipitation: \(String(format: "%.1f", weather.precipitation ?? 0)) mm/h")
-                                        .font(.title2)
-                                        .foregroundColor(.black)
-                                    
-                                    Text("Humidity: \(String(format: "%.1f", weather.humidity ?? 0))%")
-                                        .font(.title2)
-                                        .foregroundColor(.black)
-                                    
-                                    Button(action: {
-                                        fetchData()
-                                        Task {
-                                            await weather.fetchWeather(for: location)
-                                        }
-                                    }) {
-                                        /*Text("Reload Data")
-                                            .foregroundStyle(Color.white)
-                                            .padding()
-                                            .background(Color.blue)
-                                            .clipShape(RoundedRectangle(cornerRadius: 20))
-                                            .disabled(isLoading || locationManager.coordinates == nil)
-                                         */
+                                    HStack {
+                                        Image(systemName: "location")
+                                        Text(locationName)
+                                            .font(.subheadline)
+                                            .foregroundColor(.blue)
                                     }
-                                    */
+                                    
+                                    Rectangle()
+                                        .frame(height: 200)
+                                    
+                                    Spacer()
+                                    
+                                    HStack {
+                                        
+                                        VStack {
+                                            
+                                            HStack {
+                                                Text("Transit Time")
+                                                    .font(.title2)
+                                                    .foregroundColor(.black)
+                                                
+                                                Spacer()
+                                                
+                                                Text(object[3])
+                                                    .font(.title2)
+                                                    .foregroundColor(.black)
+                                            }
+                                            
+                                            HStack {
+                                                Text("Date")
+                                                    .font(.title2)
+                                                    .foregroundColor(.black)
+                                                
+                                                Spacer()
+                                                
+                                                Text(date)
+                                                    .font(.title2)
+                                                    .foregroundColor(.black)
+                                            }
+                                            
+                                            HStack {
+                                                Text("Temperature")
+                                                    .font(.title2)
+                                                    .foregroundColor(.black)
+                                                
+                                                Spacer()
+                                                
+                                                if let temperature = weather.temperature {
+                                                    Text("\(String(format: "%.1f", temperature))°C")
+                                                        .font(.title2)
+                                                        .foregroundColor(.black)
+                                                }
+                                            }
+                                            
+                                            HStack {
+                                                Text("Cloud coverage")
+                                                    .font(.title2)
+                                                    .foregroundColor(.black)
+                                                
+                                                Spacer()
+                                                
+                                                if let cloudCover = weather.cloudCover {
+                                                    Text("\(String(format: "%.1f", cloudCover))%")
+                                                        .font(.title2)
+                                                        .foregroundColor(.black)
+                                                }
+                                            }
+                                            
+                                            HStack {
+                                                Text("Precipitation")
+                                                    .font(.title2)
+                                                    .foregroundColor(.black)
+                                                
+                                                Spacer()
+                                                
+                                                if let precipitation = weather.precipitation {
+                                                    Text("\(String(format: "%.1f", precipitation)) mm/h")
+                                                        .font(.title2)
+                                                        .foregroundColor(.black)
+                                                }
+                                            }
+                                            
+                                            HStack {
+                                                Text("Humidity")
+                                                    .font(.title2)
+                                                    .foregroundColor(.black)
+                                                
+                                                Spacer()
+                                                
+                                                if let humidity = weather.humidity {
+                                                    Text("\(String(format: "%.1f", humidity))%")
+                                                        .font(.title2)
+                                                        .foregroundColor(.black)
+                                                }
+                                            }
+                                            
+                                            HStack {
+                                                Rectangle()
+                                                    .frame(width: 200)
+                                                
+                                                Spacer()
+                                                
+                                                VStack {
+                                                    
+                                                    Spacer()
+                                                    
+                                                    HStack {
+                                                        
+                                                        Button(action: {
+                                                            fetchData()
+                                                            Task {
+                                                                await weather.fetchWeather(for: location)
+                                                            }
+                                                        }) {
+                                                            Image(systemName: "arrow.clockwise")
+                                                                .bold()
+                                                        }
+                                                        .padding()
+                                                        .background(Color.blue)
+                                                        .foregroundColor(.white)
+                                                        .cornerRadius(10)
+                                                        .disabled(isLoading || locationManager.coordinates == nil)
+                                                        
+                                                        Spacer()
+                                                    }
+                                                    Spacer()
+                                                }
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -150,8 +244,7 @@ struct SBListView: View {
         }
     }
     
-    
-    func fetchLocationName() {
+    private func fetchLocationName() {
         
         let location = CLLocation(latitude: latitude, longitude: longitude)
         let geocoder = CLGeocoder()
@@ -173,7 +266,7 @@ struct SBListView: View {
             }
         }
     }
-
+    
     func fetchData() {
         
         guard let coordinates = locationManager.coordinates else {
@@ -252,9 +345,4 @@ struct SBListView: View {
             }
         }
     }
-     
-}
-
-#Preview {
-    SBListView()
 }
