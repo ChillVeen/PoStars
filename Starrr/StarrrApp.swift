@@ -1,14 +1,14 @@
 //
-//  StarrrApp.swift
-//  Starrr
+//  StargazingApp.swift
+//  Stargazing
 //
-//  Created by Praveen Singh on 27/02/25.
+//  Created by Alessandro Rippa on 11/03/25.
 //
 
 import SwiftUI
 
 @main
-struct StarrrApp: App {
+struct StargazingApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
