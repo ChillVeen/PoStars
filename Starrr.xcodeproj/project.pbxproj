@@ -11,7 +11,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		ACD3EEA22D70AEEE0073049E /* Starrr */ = {
+		F9DC094E2D8316A900CE5B19 /* Starrr */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = Starrr;
 			sourceTree = "<group>";
@@ -32,7 +32,7 @@
 		ACD3EE972D70AEEE0073049E = {
 			isa = PBXGroup;
 			children = (
-				ACD3EEA22D70AEEE0073049E /* Starrr */,
+				F9DC094E2D8316A900CE5B19 /* Starrr */,
 				ACD3EEA12D70AEEE0073049E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,7 +61,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				ACD3EEA22D70AEEE0073049E /* Starrr */,
+				F9DC094E2D8316A900CE5B19 /* Starrr */,
 			);
 			name = Starrr;
 			packageProductDependencies = (
@@ -252,7 +252,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Starrr/Preview Content\"";
-				DEVELOPMENT_TEAM = LSWT2JFA58;
+				DEVELOPMENT_TEAM = 3C54SWM94F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -282,7 +282,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Starrr/Preview Content\"";
-				DEVELOPMENT_TEAM = LSWT2JFA58;
+				DEVELOPMENT_TEAM = 3C54SWM94F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
