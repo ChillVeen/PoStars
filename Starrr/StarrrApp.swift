@@ -11,7 +11,8 @@ import SwiftUI
 struct StarrrApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            //ContentView()
+            CreativeCoding(creativeCoding: ContentView())
         }
     }
 }

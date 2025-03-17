@@ -10,9 +10,22 @@
 		ACD3EEA02D70AEEE0073049E /* Starrr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Starrr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		242BB20E2D7F38B90088B56E /* Exceptions for "Starrr" folder in "Starrr" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = ACD3EE9F2D70AEEE0073049E /* Starrr */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		ACD3EEA22D70AEEE0073049E /* Starrr */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				242BB20E2D7F38B90088B56E /* Exceptions for "Starrr" folder in "Starrr" target */,
+			);
 			path = Starrr;
 			sourceTree = "<group>";
 		};
@@ -249,12 +262,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Starrr/Starrr.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Starrr/Preview Content\"";
-				DEVELOPMENT_TEAM = LSWT2JFA58;
+				DEVELOPMENT_TEAM = 2263LPF2FA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Starrr/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Starrr app uses location for checking cosmic events";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -279,12 +295,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Starrr/Starrr.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Starrr/Preview Content\"";
-				DEVELOPMENT_TEAM = LSWT2JFA58;
+				DEVELOPMENT_TEAM = 2263LPF2FA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Starrr/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Starrr app uses location for checking cosmic events";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
