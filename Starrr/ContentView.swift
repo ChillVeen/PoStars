@@ -6,12 +6,7 @@
 //
 
 import SwiftUI
-import CoreLocation
-import WeatherKit
 
-// MARK: - Data Models
-
-// MARK: - Main View
 struct ContentView: View {
     
     @StateObject private var locationManager = LocationManager()
@@ -358,6 +353,13 @@ struct ContentView: View {
                 
             } else {
                 locationName = "No placemark found."
+    var body: some View {
+        TabView {
+            Tab("NEOs", systemImage: "moon.fill"){
+                AsteroidListView()
+            }
+            Tab("SBos", systemImage: "star.fill"){
+                SBListView()
             }
         }
     }
