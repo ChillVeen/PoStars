@@ -1,15 +1,32 @@
 //
 //  MainView.swift
-//  Stargazing
+//  Starrr
 //
-//  Created by Alessandro Rippa on 11/03/25.
+//  Created by DWA on 19/03/25.
 //
 
 import SwiftUI
 
 struct MainView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        TabView {
+            
+            ContentView()
+                .tabItem {
+                    Label("NEOs", systemImage: "globe.central.south.asia.fill")
+                }
+            
+            ContentView2()
+                .tabItem {
+                    Label("Comets", systemImage: "star.circle.fill")
+                }
+            
+            ContentView3()
+                .tabItem {
+                    Label("PHAs", systemImage: "globe.asia.australia")
+                }
+        }
     }
 }
 

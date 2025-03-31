@@ -1,0 +1,44 @@
+/* 
+  Localizable.strings
+  Starrr
+
+  Created by Igor Tarantino on 19/03/25.
+  
+*/
+"Unable to fetch coordinates. Please ensure that the localization services are enabled and that the radio signal of your device is strong and try again." = "Unable to fetch coordinates. Please ensure that the localization services are enabled and that the radio signal of your device is strong and try again.";
+"Fetching location..." = "Fetching location...";
+"Fetch location" = "Fetch location";
+"Looking at the sky" = "Looking at the sky";
+"Transit Time" = "Transit Time";
+"Date" = "Date";
+"Temperature" = "Temperature";
+"Cloud coverage" = "Cloud coverage";
+"Precipitation" = "Precipitation";
+"Humidity" = "Humidity";
+
+"Rise time" = "Rise time";
+"The time it takes for the object to rise above the horizon after the observer's local horizon. This value depends on the observer's location and the object's current position relative to the Earth." = "The time it takes for the object to rise above the horizon after the observer's local horizon. This value depends on the observer's location and the object's current position relative to the Earth.";
+
+"Set time" = "Set time";
+"The time when the object sets below the horizon after being visible in the sky. This value is also location-dependent and depends on the object's position relative to the observer." = "The time when the object sets below the horizon after being visible in the sky. This value is also location-dependent and depends on the object's position relative to the observer.";
+
+"Transit time" = "Transit time";
+"The time when the object crosses the observer's local meridian (an imaginary line running from north to south through the observer's location). It's the moment the object is highest in the sky." = "The time when the object crosses the observer's local meridian (an imaginary line running from north to south through the observer's location). It's the moment the object is highest in the sky.";
+
+"Max. time observable" = "Max. time observable";
+"The maximum time the object is observable, usually referring to the period between rise time and set time when the object is visible in the sky." = "The maximum time the object is observable, usually referring to the period between rise time and set time when the object is visible in the sky.";
+
+"Vmag" = "Vmag";
+"Visual magnitude is the measure of the object's brightness as seen from Earth in the visible spectrum. A smaller value indicates a brighter object, with negative values indicating exceptionally bright objects." = "Visual magnitude is the measure of the object's brightness as seen from Earth in the visible spectrum. A smaller value indicates a brighter object, with negative values indicating exceptionally bright objects.";
+
+"Dec." = "Dec.";
+"Declination is a celestial coordinate that is similar to latitude on Earth, measuring the angular distance of an object north or south of the celestial equator. It helps determine the object's position in the sky." = "Declination is a celestial coordinate that is similar to latitude on Earth, measuring the angular distance of an object north or south of the celestial equator. It helps determine the object's position in the sky.";
+
+"R.A." = "R.A.";
+"Right Ascension is a celestial coordinate that corresponds to the object's angular distance measured eastward along the celestial equator, similar to longitude on Earth. It is one of the coordinates used to pinpoint the location of astronomical objects in the sky." = "Right Ascension is a celestial coordinate that corresponds to the object's angular distance measured eastward along the celestial equator, similar to longitude on Earth. It is one of the coordinates used to pinpoint the location of astronomical objects in the sky.";
+
+"Helio. range (au)" = "Helio. range (au)";
+"Heliocentric distance is the distance between the object and the Sun, measured in Astronomical Units (AU). 1 AU is the average distance from the Earth to the Sun, approximately 93 million miles (150 million kilometers)." = "Heliocentric distance is the distance between the object and the Sun, measured in Astronomical Units (AU). 1 AU is the average distance from the Earth to the Sun, approximately 93 million miles (150 million kilometers).";
+
+"Topo. range (au)" = "Topo. range (au)";
+"Topocentric distance is the distance between the object and the observer's location on Earth, measured in Astronomical Units (AU)." = "Topocentric distance is the distance between the object and the observer's location on Earth, measured in Astronomical Units (AU).";

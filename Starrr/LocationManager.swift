@@ -1,7 +1,7 @@
 //  LocationManager.swift
 //  Starr
 //
-//  Created by Igor Tarantino on 27/02/25.
+//  Created by DWA on 27/02/25.
 //
 
 import Foundation

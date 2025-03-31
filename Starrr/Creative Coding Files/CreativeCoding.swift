@@ -2,7 +2,7 @@
 //  CreativeCoding.swift
 //  Starrr
 //
-//  Created by Igor Tarantino on 11/03/25.
+//  Created by DWA on 11/03/25.
 //
 
 import SwiftUI
@@ -21,11 +21,14 @@ struct CreativeCoding: View {
 //    private let connectionDistance: CGFloat = 105
 //    private let timer = Timer.publish(every: 1/60, on: .main, in: .common).autoconnect()
     
-    var creativeCoding: ContentView
+    var creativeCoding: ContentView3
     
     var body: some View {
+        
         GeometryReader { geo in
+            
             Canvas { context, size in
+                
                 for i in 0..<particles.count {
                     for j in (i + 1)..<particles.count {
                         let dx = particles[i].position.x - particles[j].position.x
@@ -38,7 +41,7 @@ struct CreativeCoding: View {
                             connectionPath.move(to: particles[i].position)
                             connectionPath.addLine(to: particles[j].position)
                             context.stroke(connectionPath,
-                                           with: .color(Color.green.opacity(opacity)),
+                                           with: .color(Color.white.opacity(opacity)),
                                            lineWidth: 0.8)
                         }
                     }
@@ -55,11 +58,12 @@ struct CreativeCoding: View {
                     particlePath.move(to: startPoint)
                     particlePath.addLine(to: endPoint)
                     
-                    context.stroke(particlePath, with: .color(.blue), lineWidth: 5)
+                    context.stroke(particlePath, with: .color(.white), lineWidth: 5)
                 }
             }
             .background(Color.black)
             .onAppear {
+                
                 particles = (0..<creativeCoding.particleCount).map { _ in
                     Particle(
                         position: CGPoint(x: CGFloat.random(in: 0...geo.size.width),
@@ -97,5 +101,5 @@ struct CreativeCoding: View {
 }
 
 #Preview {
-    CreativeCoding(creativeCoding: ContentView())
+    CreativeCoding(creativeCoding: ContentView3())
 }

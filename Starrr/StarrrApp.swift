@@ -2,7 +2,7 @@
 //  StarrrApp.swift
 //  Starrr
 //
-//  Created by Praveen Singh on 27/02/25.
+//  Created by DWA on 27/02/25.
 //
 
 import SwiftUI
@@ -11,8 +11,7 @@ import SwiftUI
 struct StarrrApp: App {
     var body: some Scene {
         WindowGroup {
-            //ContentView()
-            CreativeCoding(creativeCoding: ContentView())
+            MainView()
         }
     }
 }

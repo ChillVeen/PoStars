@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  Starrr
+
+  Created by Igor Tarantino on 19/03/25.
+  
+*/
+"Unable to fetch coordinates. Please ensure that the localization services are enabled and that the radio signal of your device is strong and try again." = "Não foi possível obter as coordenadas. Certifique-se de que os serviços de localização estão ativados e que o sinal de rádio do seu dispositivo está forte e tente novamente.";
+"Fetching location..." = "Buscando localização...";
+"Fetch location" = "Buscar localização";
+"Looking at the sky" = "Olhando para o céu";
+"Transit Time" = "Tempo de trânsito";
+"Date" = "Data";
+"Temperature" = "Temperatura";
+"Cloud coverage" = "Cobertura de nuvens";
+"Precipitation" = "Precipitação";
+"Humidity" = "Umidade";

@@ -2,7 +2,7 @@
 //  ContentView2.swift
 //  Starrr
 //
-//  Created by Igor Tarantino on 17/03/25.
+//  Created by DWA on 17/03/25.
 //
 
 import SwiftUI
@@ -51,7 +51,11 @@ struct ContentView2: View {
         NavigationView {
             
             ZStack {
-                CreativeCoding(creativeCoding: ContentView())
+                
+                Color.black
+                    .ignoresSafeArea()
+                
+                CreativeCoding3()
                     .ignoresSafeArea()
                     .opacity(opacityValue)
                     .background(Color.black)
@@ -64,6 +68,7 @@ struct ContentView2: View {
                         Text("Unable to fetch coordinates. Please ensure that the localization services are enabled and that the radio signal of your device is strong and try again.")
                             .foregroundStyle(Color.red)
                             .padding()
+                            .font(.custom("MontserratAlternates-Bold", size: 15))
                         
                         Button(action: {
                             fetchData()
@@ -73,6 +78,7 @@ struct ContentView2: View {
                                 .padding()
                                 .background(Color.blue)
                                 .clipShape(RoundedRectangle(cornerRadius: 20))
+                                .font(.custom("MontserratAlternates-Bold", size: 15))
                         }
                     }
                     
@@ -83,6 +89,8 @@ struct ContentView2: View {
                             .tint(Color.white)
                             .scaleEffect(1.2)
                             .foregroundStyle(Color.white)
+                            .font(.custom("MontserratAlternates-Bold", size: 20))
+                            .offset(y: 25)
                         
                     } else if let apiResponse = apiResponse {
                         
@@ -94,112 +102,111 @@ struct ContentView2: View {
                                     VStack(alignment: .center) {
                                         
                                         Text(object[1])
-                                            .font(.system(size: 30, weight: .bold))
+                                            .font(.custom("MontserratAlternates-Bold", size: 25))
                                             .foregroundStyle(Color.white)
                                         
                                         HStack {
                                             Image(systemName: "location")
                                             Text(locationName)
-                                                .font(.subheadline)
+                                                .font(.custom("MontserratAlternates-Bold", size: 15))
                                                 .foregroundColor(.white)
                                         }
                                         
                                         CreativeCoding2()
-                                            .padding() // Space between view and frame
-                                            .background(
-                                                RoundedRectangle(cornerRadius: 10)
-                                            .stroke(Color.white, lineWidth: 3)
-                                                 
-                                                
-                                                )
-                                        
+                                            .clipShape(RoundedRectangle(cornerRadius: 25))
+                                            .ignoresSafeArea()
+                                            .padding(.bottom)
                                             
-                                        
+//                                            .background(
+//                                                RoundedRectangle(cornerRadius: 10)
+//                                                    .stroke(Color.white, lineWidth: 3)
+//                                            )
+
                                         HStack {
                                             
                                             VStack {
                                                 
                                                 HStack {
                                                     Text("Transit Time")
-                                                        .font(.title2)
+                                                        .font(.custom("MontserratAlternates-Bold", size: 20))
                                                         .foregroundColor(.white)
                                                     
                                                     Spacer()
                                                     
                                                     Text(object[3])
-                                                        .font(.title2)
+                                                        .font(.custom("MontserratAlternates-Bold", size: 20))
                                                         .foregroundColor(.white)
                                                 }
                                                 
                                                 HStack {
                                                     Text("Date")
-                                                        .font(.title2)
+                                                        .font(.custom("MontserratAlternates-Bold", size: 20))
                                                         .foregroundColor(.white)
                                                     
                                                     Spacer()
                                                     
                                                     Text(date)
-                                                        .font(.title2)
+                                                        .font(.custom("MontserratAlternates-Bold", size: 20))
                                                         .foregroundColor(.white)
                                                 }
                                                 
                                                 HStack {
                                                     Text("Temperature")
-                                                        .font(.title2)
+                                                        .font(.custom("MontserratAlternates-Bold", size: 20))
                                                         .foregroundColor(.white)
                                                     
                                                     Spacer()
                                                     
                                                     if let temperature = weather.hourlyTemperature {
                                                         Text("\(String(format: "%.1f", temperature))°C")
-                                                            .font(.title2)
+                                                            .font(.custom("MontserratAlternates-Bold", size: 20))
                                                             .foregroundColor(.white)
                                                     }
                                                 }
                                                 
                                                 HStack {
                                                     Text("Cloud coverage")
-                                                        .font(.title2)
+                                                        .font(.custom("MontserratAlternates-Bold", size: 20))
                                                         .foregroundColor(.white)
                                                     
                                                     Spacer()
                                                     
                                                     if let cloudCover = weather.hourlyCondition {
                                                         Text("\(String(cloudCover))")
-                                                            .font(.title2)
+                                                            .font(.custom("MontserratAlternates-Bold", size: 20))
                                                             .foregroundColor(.white)
                                                     }
                                                 }
                                                 
                                                 HStack {
                                                     Text("Precipitation")
-                                                        .font(.title2)
+                                                        .font(.custom("MontserratAlternates-Bold", size: 20))
                                                         .foregroundColor(.white)
                                                     
                                                     Spacer()
                                                     
                                                     if let precipitation = weather.hourlyPrecipitationChance {
                                                         Text("\(String(format: "%.1f", precipitation)) mm/h")
-                                                            .font(.title2)
+                                                            .font(.custom("MontserratAlternates-Bold", size: 20))
                                                             .foregroundColor(.white)
                                                     }
                                                 }
                                                 
                                                 HStack {
                                                     Text("Humidity")
-                                                        .font(.title2)
+                                                        .font(.custom("MontserratAlternates-Bold", size: 20))
                                                         .foregroundColor(.white)
                                                     
                                                     Spacer()
                                                     
                                                     if let humidity = weather.hourlyHumidity {
                                                         Text("\(String(format: "%.1f", humidity))%")
-                                                            .font(.title2)
+                                                            .font(.custom("MontserratAlternates-Bold", size: 20))
                                                             .foregroundColor(.white)
                                                     }
                                                 }
                                                 
-                                               
+                                                
                                             }
                                         }
                                     }
@@ -212,24 +219,24 @@ struct ContentView2: View {
                         }
                     }
                     
-                Spacer()
-            }
-            .padding()
-            .onAppear {
-                // gives a bit of delay to wait for full loading of the locationManager
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                    fetchData()
-                    Task {
-                        await weather.fetchWeather(for: location)
-                    }
+                    Spacer()
                 }
-                // canvas view in swift
-                // create an array - grid of 12x8 rectangles
-                // procedurally animate the shapes
-                // pfjs - javascript
+                .padding()
+                .onAppear {
+                    // gives a bit of delay to wait for full loading of the locationManager
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                        fetchData()
+                        Task {
+                            await weather.fetchWeather(for: location)
+                        }
+                    }
+                    // canvas view in swift
+                    // create an array - grid of 12x8 rectangles
+                    // procedurally animate the shapes
+                    // pfjs - javascript
+                }
             }
         }
-    }
     }
     
     private func fetchLocationName() {
@@ -277,7 +284,7 @@ struct ContentView2: View {
         date = currentDate
         
         let urlString =
-        "https://ssd-api.jpl.nasa.gov/sbwobs.api?lat=\(lat)&lon=\(lon)&obs-time=\(currentDate)&maxoutput=5&output-sort=vmag&sb-group=neo"
+        "https://ssd-api.jpl.nasa.gov/sbwobs.api?lat=\(lat)&lon=\(lon)&obs-time=\(currentDate)&maxoutput=5&output-sort=dec&sb-group=neo"
         
         guard let url = URL(string: urlString) else {
             errorMessage = "Invalid URL"

@@ -1,0 +1,44 @@
+/* 
+  Localizable.strings
+  Starrr
+
+  Created by Igor Tarantino on 19/03/25.
+  
+*/
+"Unable to fetch coordinates. Please ensure that the localization services are enabled and that the radio signal of your device is strong and try again." = "Impossibile ottenere le coordinate. Assicurati che i servizi di localizzazione siano attivati e che il segnale radio del tuo dispositivo sia forte e riprova.";
+"Fetching location..." = "Recupero della posizione...";
+"Fetch location" = "Recupera posizione";
+"Looking at the sky" = "Guardando il cielo";
+"Transit Time" = "Tempo di transito";
+"Date" = "Data";
+"Temperature" = "Temperatura";
+"Cloud coverage" = "Copertura nuvolosa";
+"Precipitation" = "Precipitazioni";
+"Humidity" = "Umidità";
+
+"Rise time" = "Tempo di levata";
+"The time it takes for the object to rise above the horizon after the observer's local horizon. This value depends on the observer's location and the object's current position relative to the Earth." = "Il tempo necessario affinché l'oggetto si alzi sopra l'orizzonte dopo l'orizzonte locale dell'osservatore. Questo valore dipende dalla posizione dell'osservatore e dalla posizione corrente dell'oggetto rispetto alla Terra.";
+
+"Set time" = "Tempo di tramonto";
+"The time when the object sets below the horizon after being visible in the sky. This value is also location-dependent and depends on the object's position relative to the observer." = "Il momento in cui l'oggetto tramonta sotto l'orizzonte dopo essere stato visibile nel cielo. Questo valore dipende anche dalla posizione e dalla posizione dell'oggetto rispetto all'osservatore.";
+
+"Transit time" = "Tempo di transito";
+"The time when the object crosses the observer's local meridian (an imaginary line running from north to south through the observer's location). It's the moment the object is highest in the sky." = "Il momento in cui l'oggetto attraversa il meridiano locale dell'osservatore (una linea immaginaria che va da nord a sud attraverso la posizione dell'osservatore). È il momento in cui l'oggetto è più alto nel cielo.";
+
+"Max. time observable" = "Tempo massimo osservabile";
+"The maximum time the object is observable, usually referring to the period between rise time and set time when the object is visible in the sky." = "Il tempo massimo in cui l'oggetto è osservabile, solitamente riferito al periodo tra il tempo di alba e il tempo di tramonto quando l'oggetto è visibile nel cielo.";
+
+"Vmag" = "Magnitudine visuale";
+"Visual magnitude is the measure of the object's brightness as seen from Earth in the visible spectrum. A smaller value indicates a brighter object, with negative values indicating exceptionally bright objects." = "La magnitudine visuale è la misura della luminosità dell'oggetto vista dalla Terra nello spettro visibile. Un valore più piccolo indica un oggetto più luminoso, con valori negativi che indicano oggetti eccezionalmente luminosi.";
+
+"Dec." = "Declinazione";
+"Declination is a celestial coordinate that is similar to latitude on Earth, measuring the angular distance of an object north or south of the celestial equator. It helps determine the object's position in the sky." = "La declinazione è una coordinata celeste simile alla latitudine sulla Terra, che misura la distanza angolare di un oggetto a nord o a sud dell'equatore celeste. Aiuta a determinare la posizione dell'oggetto nel cielo.";
+
+"R.A." = "Ascensione Retta";
+"Right Ascension is a celestial coordinate that corresponds to the object's angular distance measured eastward along the celestial equator, similar to longitude on Earth. It is one of the coordinates used to pinpoint the location of astronomical objects in the sky." = "L'Ascensione Retta è una coordinata celeste che corrisponde alla distanza angolare dell'oggetto misurata verso est lungo l'equatore celeste, simile alla longitudine sulla Terra. È una delle coordinate utilizzate per individuare la posizione degli oggetti astronomici nel cielo.";
+
+"Helio. range (au)" = "Distanza eliocentrica (au)";
+"Heliocentric distance is the distance between the object and the Sun, measured in Astronomical Units (AU). 1 AU is the average distance from the Earth to the Sun, approximately 93 million miles (150 million kilometers)." = "La distanza eliocentrica è la distanza tra l'oggetto e il Sole, misurata in Unità Astronomiche (AU). 1 AU è la distanza media dalla Terra al Sole, circa 93 milioni di miglia (150 milioni di chilometri).";
+
+"Topo. range (au)" = "Distanza topocentrica (au)";
+"Topocentric distance is the distance between the object and the observer's location on Earth, measured in Astronomical Units (AU)." = "La distanza topocentrica è la distanza tra l'oggetto e la posizione dell'osservatore sulla Terra, misurata in Unità Astronomiche (AU).";
