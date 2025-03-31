@@ -1,13 +1,18 @@
 //
-//  ContentView.swift
-//  Starr
+//  ContentView2.swift
+//  Starrr
 //
-//  Created by Igor Tarantino on 26/02/25.
+//  Created by Igor Tarantino on 17/03/25.
 //
 
 import SwiftUI
+import CoreLocation
+import WeatherKit
 
-struct ContentView: View {
+// MARK: - Data Models
+
+// MARK: - Main View
+struct ContentView2: View {
     
     @StateObject private var locationManager = LocationManager()
     @State private var apiResponse: APIResponse?
@@ -99,10 +104,16 @@ struct ContentView: View {
                                                 .foregroundColor(.white)
                                         }
                                         
-                                        Rectangle()
-                                            .frame(height: 200)
+                                        CreativeCoding2()
+                                            .padding() // Space between view and frame
+                                            .background(
+                                                RoundedRectangle(cornerRadius: 10)
+                                            .stroke(Color.white, lineWidth: 3)
+                                                 
+                                                
+                                                )
                                         
-                                        Spacer()
+                                            
                                         
                                         HStack {
                                             
@@ -188,38 +199,7 @@ struct ContentView: View {
                                                     }
                                                 }
                                                 
-                                                HStack {
-                                                    CreativeCoding2()
-                                                        .clipShape(RoundedRectangle(cornerRadius: 50))
-                                                    
-                                                    Spacer()
-                                                    
-                                                    VStack {
-                                                        
-                                                        Spacer()
-                                                        
-                                                        HStack {
-                                                            
-                                                            Button(action: {
-                                                                fetchData()
-                                                                Task {
-                                                                    await weather.fetchWeather(for: location)
-                                                                }
-                                                            }) {
-                                                                Image(systemName: "arrow.clockwise")
-                                                                    .bold()
-                                                            }
-                                                            .padding()
-                                                            .background(Color.blue)
-                                                            .foregroundColor(.white)
-                                                            .cornerRadius(10)
-                                                            .disabled(isLoading || locationManager.coordinates == nil)
-                                                            
-                                                            Spacer()
-                                                        }
-                                                        Spacer()
-                                                    }
-                                                }
+                                               
                                             }
                                         }
                                     }
@@ -324,7 +304,7 @@ struct ContentView: View {
                 do {
                     let decodedResponse = try JSONDecoder().decode(APIResponse.self, from: data)
                     apiResponse = decodedResponse
-                    print(apiResponse?.data[0][3])
+                    print(apiResponse?.data[0][3] as Any)
                 } catch {
                     errorMessage = "Failed to decode JSON: \(error.localizedDescription)"
                 }
@@ -351,18 +331,11 @@ struct ContentView: View {
                 
             } else {
                 locationName = "No placemark found."
-    var body: some View {
-        TabView {
-            Tab("NEOs", systemImage: "moon.fill"){
-                AsteroidListView()
-            }
-            Tab("SBos", systemImage: "star.fill"){
-                SBListView()
             }
         }
     }
 }
 
 #Preview {
-    ContentView()
+    ContentView2()
 }

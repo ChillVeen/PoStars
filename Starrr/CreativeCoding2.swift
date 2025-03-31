@@ -9,12 +9,12 @@ import SwiftUI
 
 import SwiftUI
 
-struct CurvedWaveLinesView: View {
+struct CreativeCoding2: View {
     // Variables to control the lines
     @State private var phase: CGFloat = 0
-    let lineThicknesses: [CGFloat] = [1, 2, 3, 4, 5] // Array of thickness values
+    let lineThicknesses: [CGFloat] = [3] // Array of thickness values
     let lineSpeed: CGFloat = 0.05
-    let lineAmplitude: CGFloat = 20
+    let lineAmplitude: CGFloat = 50
     let lineSpacing: CGFloat = 10
 
     var body: some View {
@@ -22,21 +22,27 @@ struct CurvedWaveLinesView: View {
             let width = size.width
             let height = size.height
 
-            // Draw curved vertical lines
+            // Draw S-shaped vertical lines
             for x in stride(from: 0, through: width, by: lineSpacing) {
                 // Randomly select a thickness from the array
                 let randomThickness = lineThicknesses.randomElement() ?? 2
 
-                // Calculate the offset for the curve using a sine wave
-                let offset = sin((x / width) * .pi * 2 + phase) * lineAmplitude
+                // Calculate offsets for the S-shape using sine waves
+                let offset1 = sin((x / width) * .pi * 3 + phase) * lineAmplitude
+                let offset2 = sin((x / width) * .pi * 3 + phase + .pi) * lineAmplitude
 
-                // Create a curved path
+                // Create an S-shaped path
                 let path = Path { path in
                     path.move(to: CGPoint(x: x, y: 0)) // Start at the top
 
-                    // Add a quadratic Bézier curve
-                    let controlPoint = CGPoint(x: x + offset, y: height / 2) // Control point for the curve
-                    path.addQuadCurve(to: CGPoint(x: x, y: height), control: controlPoint)
+                    // Add a cubic Bézier curve for the S-shape
+                    let controlPoint1 = CGPoint(x: x + offset1, y: height * 0.3) // First control point
+                    let controlPoint2 = CGPoint(x: x + offset2, y: height * 0.9) // Second control point
+                    path.addCurve(
+                        to: CGPoint(x: x, y: height), // End at the bottom
+                        control1: controlPoint1,
+                        control2: controlPoint2
+                    )
                 }
 
                 // Stroke the path with the random thickness
@@ -53,5 +59,5 @@ struct CurvedWaveLinesView: View {
 }
 
 #Preview {
-    CurvedWaveLinesView()
+    CreativeCoding2()
 }
