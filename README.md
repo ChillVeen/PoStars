@@ -1,4 +1,10 @@
-# PoStars
+
+
+# PoStars - A uniquely designed way of stargazing
+
+<p align="center">
+  <img src="Starrr/Assets.xcassets/AppIcon.appiconset/appiconfinal.png" width="200" alt="PoStars Logo">
+</p>
 
 PoStars helps stargazers to understand where and which astronomical events are happening in the cosmos with an unconventional design. This iOS project, built using Swift and SwiftUI, showcases innovative UI approaches alongside creative coding examples and NASA API integrations.
 
